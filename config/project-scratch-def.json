@@ -1,7 +1,15 @@
 {
-  "orgName": "Demo company",
+  "orgName": "Infinitus",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": [
+    "EnableSetPasswordInApi", 
+    "HealthCloudAddOn",
+    "ServiceCloud",
+    "ContactsToMultipleAccounts",
+    "PlatformEncryption",
+    "API",
+    "Communities",
+    "SalesUser"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
