@@ -11,12 +11,6 @@
     "Communities",
     "SalesUser"],
   "settings": {
-    "orgPreferenceSettings": {
-      "s1DesktopEnabled": true,
-      "healthCloudEnabled": true,
-      "pathAssistantsEnabled": true,
-      "analyticsEnabled": true
-    },
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
