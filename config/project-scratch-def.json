@@ -1,13 +1,30 @@
 {
-  "orgName": "Demo company",
+  "orgName": "Infinitus",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": [
+    "EnableSetPasswordInApi", 
+    "HealthCloudAddOn",
+    "ServiceCloud",
+    "ContactsToMultipleAccounts",
+    "PlatformEncryption",
+    "API",
+    "Communities",
+    "SalesUser"],
   "settings": {
+    "orgPreferenceSettings": {
+      "s1DesktopEnabled": true,
+      "healthCloudEnabled": true,
+      "pathAssistantsEnabled": true,
+      "analyticsEnabled": true
+    },
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
+    },
+    "securitySettings": {
+      "enableSecureHttpOnlyCookies": true
     }
   }
 }
