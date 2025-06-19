@@ -22,9 +22,6 @@
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
-    },
-    "securitySettings": {
-      "enableSecureHttpOnlyCookies": true
     }
   }
 }
