@@ -9,7 +9,8 @@
     "PlatformEncryption",
     "API",
     "Communities",
-    "SalesUser"],
+    "SalesUser",
+    "PersonAccounts"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true

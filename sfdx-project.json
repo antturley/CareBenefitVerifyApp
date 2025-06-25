@@ -6,14 +6,14 @@
       "path": "force-app",
       "default": true,
       "package": "Care Benefit Verification App",
-      "versionDescription": ""
+      "versionDescription": "Native Salesforce Application to create CareBenefitVerifyRequest records in Salesforce."
     }
   ],
   "name": "CareBenefitVerifyApp",
-  "namespace": "",
+  "namespace": "CBVR",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "62.0",
   "packageAliases": {
-    "Care Benefit Verification App": "0HogL0000000FOrSAM"
+    "Care Benefit Verification App": "0HogL0000000G81SAE"
   }
 }
