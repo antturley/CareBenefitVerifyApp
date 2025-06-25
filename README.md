@@ -170,10 +170,10 @@ Benefit Verification App Walkthrough — Full app demonstration, including UI co
 
 - Queue-based task routing (queue must be created manually post-deploy)
 
-External Request Payload Format
+### External Request Payload Format
 The integration with the benefits verification service sends a structured JSON request with the following nested format:
 
-json
+```json
 {
   "patient": {
     "firstName": "Jane",
@@ -199,26 +199,28 @@ json
     "procedureCode": "99385"
   }
 }
+```
+
 > This payload is generated from the BenefitVerificationRequest class and transmitted via the configured ExternalCredential. Adjust the structure as needed if your remote service expects alternative naming conventions or field mappings.
 
 ---
 
-Benefits Verification Request Model
+**Benefits Verification Request Model**
 When Salesforce Health Cloud sends a request to an external benefits verification service, it uses the Benefits Verification Request model. This request is typically triggered by the Verify Benefits button in the UI or programmatically through Apex.
 
 Required Fields
-memberAccountId: ID of the patient’s Account record
+```memberAccountId```: ID of the patient’s Account record
 
-memberPlanId: ID of the Member Plan record
+```memberPlanId```: ID of the Member Plan record
 
-providerNpi: National Provider Identifier
+```providerNpi```: National Provider Identifier
 
-encounterDate: Date of service
+```encounterDate```: Date of service
 
-serviceTypeCodes: Array of service type codes (e.g., "30" for General Medical)
+```serviceTypeCodes```: Array of service type codes (e.g., "30" for General Medical)
 
 Sample JSON Request
-json
+```json
 {
   "memberAccountId": "0018b00002ABC123",
   "memberPlanId": "a0H8b00000XYZ789",
@@ -228,24 +230,26 @@ json
   "encounterDate": "2024-07-01",
   "serviceTypeCodes": ["30", "98"]
 }
+```
+
 > This payload is sent from the Benefit Verification Component to the class defined in your Care Benefit Verification Settings.
 
-Benefits Verification Response Model
+**Benefits Verification Response Model**
 After a successful call to the external benefits verification service, Salesforce Health Cloud receives a structured response that maps to the CareBenefitVerifyRequest__c and CoverageBenefit__c records.
 
 Key Response Fields
-careBenefitVerifyRequestId: ID of the original verification request
+```careBenefitVerifyRequestId```: ID of the original verification request
 
-coverageBenefitId: ID of the created CoverageBenefit__c record
+```coverageBenefitId```: ID of the created CoverageBenefit__c record
 
-isSuccess: Boolean flag indicating if the verification succeeded
+```isSuccess```: Boolean flag indicating if the verification succeeded
 
-code: Status or error code returned by the external service
+```code```: Status or error code returned by the external service
 
-message: Human-readable message from the service
+```message```: Human-readable message from the service
 
 Sample JSON Response
-json
+```json
 {
   "careBenefitVerifyRequestId": "a0B8b00000ABC123",
   "coverageBenefitId": "a0C8b00000XYZ789",
@@ -253,6 +257,8 @@ json
   "code": "200",
   "message": "Verification completed successfully"
 }
+```
+
 > This response is processed by Salesforce's Benefit Verification Component to update the verification request record and create or update related coverage benefit records. If isSuccess is false, the message and code fields help identify the issue.
 
 ---
@@ -264,41 +270,49 @@ Follow the steps below to download the Salesforce DX project from GitHub, author
 Step 1: Clone the GitHub Repo
 First, open your terminal and run:
 
-bash
+```bash
 git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
+```
 > Replace <your-username> and <your-repo-name> with your GitHub account name and the project repo name.
 
 Step 2: Authorize Your Salesforce Org
 Use the Salesforce CLI to log in to the org where you want to deploy the metadata:
 
-bash
+```bash
 sf org login web --alias MyTargetOrg
 This opens a browser window for you to authenticate.
+```
 
 After logging in, the alias MyTargetOrg can be used in all future commands.
 
 Step 3: Set Default Org (Optional but helpful)
 If you want to make this your default org for the project:
 
-bash
+```bash
 sf config set target-org MyTargetOrg
+```
 
 Step 4: Deploy the Project Metadata
 From your project root directory, deploy all source files:
 
-bash
+```bash
 sf project deploy start --target-org MyTargetOrg
+```
+
 You can also preview the changes first with:
 
-bash
+```bash
 sf project deploy preview --target-org MyTargetOrg
+```
 
 Step 5: Verify Deployment
 You can now open the org and verify everything deployed correctly:
 
-bash
+```bash
 sf org open --target-org MyTargetOrg
+```
+
 Navigate to App Launcher and check for custom objects, Lightning components, or other deployed metadata.
 
 ### Notes
