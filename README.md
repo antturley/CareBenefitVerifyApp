@@ -50,9 +50,9 @@ Looking back, I realize that I could have used Salesforce Cases to track benefit
 🎥 Code & App Walkthroughs
 Take a guided look into the architecture, workflows, and integration design of the Care Benefit Verification App:
 
-🔧 Code Walkthrough — Apex logic, trigger flows, metadata structure, and queue-based task automation 📺 Watch Code Walkthrough
+🔧 Code Walkthrough — Apex logic, trigger flows, metadata structure, and queue-based task automation 📺 Watch Code Walkthrough - https://drive.google.com/file/d/11TSv7TGhUfo50LdTrF1PJ8c9siAKjsNj/view?usp=sharing
 
-💡 Benefit Verification App Walkthrough — Full app demonstration, including UI configuration and user flow 📺 Watch Benefit Verification App Walkthrough
+💡 Benefit Verification App Walkthrough — Full app demonstration, including UI configuration and user flow 📺 Watch Benefit Verification App Walkthrough - https://drive.google.com/file/d/1AGJ3DqTPiRXz5CYtCTZcBoFFdu6o84A6/view?usp=sharing
 
 ---
 
